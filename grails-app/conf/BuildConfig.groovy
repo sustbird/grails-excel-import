@@ -18,10 +18,12 @@ grails.project.dependency.resolution = {
 		// from public Maven repositories
 		mavenLocal()
 		mavenCentral()
-		//mavenRepo "http://snapshots.repository.codehaus.org"
-		//mavenRepo "http://repository.codehaus.org"
-		//mavenRepo "http://download.java.net/maven/2/"
-		//mavenRepo "http://repository.jboss.com/maven2/"
+
+		mavenRepo "https://repo.grails.org/grails/plugins/"
+		mavenRepo "http://snapshots.repository.codehaus.org"
+		mavenRepo "http://repository.codehaus.org"
+		mavenRepo "http://download.java.net/maven/2/"
+		mavenRepo "http://repository.jboss.com/maven2/"
 	}
 
 	dependencies {
@@ -38,6 +40,8 @@ grails.project.dependency.resolution = {
 	plugins {
 		build ":release:3.0.1"
 		build ":tomcat:7.0.53"
+		runtime ":joda-time:1.5"
+
 
 		compile ':hibernate:3.6.10.15' {
 			export = false
